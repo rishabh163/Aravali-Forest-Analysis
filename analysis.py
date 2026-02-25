@@ -60,7 +60,7 @@ print(f" Change: {mean_last - mean_first:.2f}%")
 
 t_stat, p_value = stats.ttest_rel(df[str(first_year)], df[str(last_year)])
 
-print(f"\n🔬 Paired t-test p-value: {p_value:.4f}")
+print(f"\n Paired t-test p-value: {p_value:.4f}")
 
 if p_value < 0.05:
     print(" Statistically significant change detected.")
