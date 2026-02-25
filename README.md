@@ -65,16 +65,6 @@ Cohen's d: 2.28
 ```
 ---
 
-## 📷 Terminal Output Screenshot
-
-Below is the actual terminal output after running the script:
-
-<p align="center">
-  <img src="output_terminal.png" width="650">
-</p>
-
----
-
 ## Files in This Project
 
 - `data/aravali_forest_data.csv` – cleaned dataset compiled from ISFR reports  
