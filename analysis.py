@@ -10,17 +10,17 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 # ===============================
-# 1️⃣ Load Data
+# 1️. Load Data
 # ===============================
 
 data_path = "data/aravali_forest_data.csv"
 df = pd.read_csv(data_path)
 
-print("✅ Data loaded successfully.")
+print(" Data loaded successfully.")
 print("Shape:", df.shape)
 
 # ===============================
-# 2️⃣ Prepare Data
+# 2️. Prepare Data
 # ===============================
 
 # Set district as index
@@ -28,20 +28,20 @@ df.set_index("District", inplace=True)
 
 # Extract year columns dynamically
 years = sorted([int(col) for col in df.columns])
-print("\n📅 Years detected:", years)
+print("\n Years detected:", years)
 
 # Convert columns to numeric (safety)
 df = df.apply(pd.to_numeric)
 
 # ===============================
-# 3️⃣ Display Table
+# 3️. Display Table
 # ===============================
 
-print("\n📊 Forest % by district and year:")
+print("\n Forest % by district and year:")
 print(df)
 
 # ===============================
-# 4️⃣ Mean Comparison
+# 4️. Mean Comparison
 # ===============================
 
 first_year = years[0]
@@ -50,12 +50,12 @@ last_year = years[-1]
 mean_first = df[str(first_year)].mean()
 mean_last = df[str(last_year)].mean()
 
-print(f"\n📈 Mean forest % in {first_year}: {mean_first:.2f}%")
-print(f"📉 Mean forest % in {last_year}: {mean_last:.2f}%")
-print(f"🔻 Change: {mean_last - mean_first:.2f}%")
+print(f"\n Mean forest % in {first_year}: {mean_first:.2f}%")
+print(f" Mean forest % in {last_year}: {mean_last:.2f}%")
+print(f" Change: {mean_last - mean_first:.2f}%")
 
 # ===============================
-# 5️⃣ Paired T-Test
+# 5️. Paired T-Test
 # ===============================
 
 t_stat, p_value = stats.ttest_rel(df[str(first_year)], df[str(last_year)])
@@ -63,18 +63,18 @@ t_stat, p_value = stats.ttest_rel(df[str(first_year)], df[str(last_year)])
 print(f"\n🔬 Paired t-test p-value: {p_value:.4f}")
 
 if p_value < 0.05:
-    print("✅ Statistically significant change detected.")
+    print(" Statistically significant change detected.")
 else:
-    print("❌ No statistically significant change detected.")
+    print(" No statistically significant change detected.")
 
 # ===============================
-# 6️⃣ Effect Size (Cohen's d)
+# 6️. Effect Size (Cohen's d)
 # ===============================
 
 diff = df[str(last_year)] - df[str(first_year)]
 cohen_d = diff.mean() / diff.std()
 
-print(f"📏 Cohen's d (effect size): {cohen_d:.2f}")
+print(f" Cohen's d (effect size): {cohen_d:.2f}")
 
 if abs(cohen_d) < 0.2:
     interpretation = "Small effect"
@@ -88,7 +88,7 @@ else:
 print(f"   {interpretation}")
 
 # ===============================
-# 7️⃣ Plot Trends
+# 7️. Plot Trends
 # ===============================
 
 plt.figure(figsize=(12,6))
