@@ -1,5 +1,5 @@
 """
-Aravali Forest Cover Analysis (Dynamic Version)
+Aravali Forest Cover Analysis (Dynamic Version).
 Author: Rishabh
 Purpose: Automatic multi-year statistical analysis
 """
