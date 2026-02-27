@@ -109,14 +109,14 @@ python analysis.py
 
 ## Future Enhancement
 
-In future, this project can be enhanced by:
+In the future, this project can be enhanced by:
 
 - Adding Machine Learning techniques to predict forest cover trends up to 2050.
 - Using larger and more detailed datasets to improve prediction accuracy.
 - Improving the analysis with better visualization of future projections.
 - Expanding the study by including other environmental factors.
-The current version focuses on statistical analysis of historical data, while future versions will incorporate Machine Learning for predictive modeling.
 
+The current version focuses on statistical analysis of historical data, while future versions will incorporate Machine Learning for predictive modeling.
 ---
 
 ## About Me
