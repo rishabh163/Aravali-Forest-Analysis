@@ -117,6 +117,7 @@ In the future, this project can be enhanced by:
 - Expanding the study by including other environmental factors.
 
 The current version focuses on statistical analysis of historical data, while future versions will incorporate Machine Learning for predictive modeling.
+
 ---
 
 ## About Me
